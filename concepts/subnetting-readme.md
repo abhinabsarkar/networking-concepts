@@ -12,13 +12,14 @@ Wireless LAN adapter Wi-Fi:
 ```
 TCP/IP are addressed and divided into networks and subnetworks. These networks are arbitrarily defined into three main classes (along with a few others) that have predefined sizes, each of which can be divided into smaller subnetworks.
 
-**IP address** - An IP address is a 32-bit number that uniquely identifies a host on a TCP/IP network. 
-* In the above example, the address space of home network is 
-    * 192.168.2.0/24
-* where 192.168.2.14 is IPv4 address of the **host computer**
-    * 192.168.2.0 is the **Network ID** (unique identifier of the network)
-    * 0.0.0.14 is the **host ID** (identifier of the host in the Network ID)
-    * /24 is the **CIDR** (Classless inter-domain routing - identifies the bits reserved for the Network ID)
+**IP address** - An IP address is a 32-bit number that uniquely identifies a host on a TCP/IP network.  
+In the above example, the address space of home network is  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.2.0/24  
+where  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.2.14 is IPv4 address of the **host computer**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192.168.2.0 is the **Network ID** (unique identifier of the network)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0.0.14 is the **host ID** (identifier of the host in the Network ID)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/24 is the **CIDR** (Classless inter-domain routing - identifies the bits reserved for the Network ID)  
 
 **Subnet Mask** - A Subnet mask is a 32-bit string that masks an IP address, and divides the IP address into network address and host address. Subnet Mask is made by setting network bits to all "1"s and setting host bits to all "0"s.
 
@@ -33,13 +34,13 @@ The logical division of the network helps improve network performance and improv
 
 Lining up the IP address and the subnet mask together, the network and host portions of the address can be separated:
  
-   11000000.10101000.00000010.00001110 -- IP address (192.168.2.14)
-   11111111.11111111.11111111.00000000 -- Subnet mask (255.255.255.0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11000000.10101000.00000010.00001110 -- IP address (192.168.2.14)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11111111.11111111.11111111.00000000 -- Subnet mask (255.255.255.0)
  
 The first 24 bits (the number of ones in the subnet mask) are identified as the network address, with the last 8 bits (the number of remaining zeros in the subnet mask) identified as the host address. This gives you the following:
  
-   11000000.10101000.01111011.00000000 -- Network address (192.168.2.0)
-   00000000.00000000.00000000.00001110 -- Host address (000.000.000.14)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11000000.10101000.01111011.00000000 -- Network address (192.168.2.0)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00000000.00000000.00000000.00001110 -- Host address (000.000.000.14)
 
 When a packet arrives on the 192.168.2.0 subnet (from the local subnet or a remote network), and it has a destination address of 192.168.2.14, your computer will receive it from the network and process it.
 
