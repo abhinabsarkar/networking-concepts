@@ -82,6 +82,20 @@ When a host attempts to communicate with another device using TCP/IP, it perform
 
 If the result of this process determines the destination to be a local host, then the computer will simply send the packet on the local subnet. If the result of the comparison determines the destination to be a remote host, then the computer will forward the packet to the default gateway defined in its TCP/IP properties. It is then the responsibility of the router to forward the packet to the correct subnet.
 
+## IP Address calculator 
+For a given IP Address space, say 131.107.2.0/24
+```cmd
+Address:   131.107.2.0           10000011.01101011.00000010 .00000000
+Netmask:   255.255.255.0 = 24    11111111.11111111.11111111 .00000000
+Wildcard:  0.0.0.255             00000000.00000000.00000000 .11111111
+=>
+Network:   131.107.2.0/24        10000011.01101011.00000010 .00000000 (Class B)
+Broadcast: 131.107.2.255         10000011.01101011.00000010 .11111111
+HostMin:   131.107.2.1           10000011.01101011.00000010 .00000001
+HostMax:   131.107.2.254         10000011.01101011.00000010 .11111110
+Hosts/Net: 254  
+```
+
 ## Glossary
 * Broadcast address -- An IP address with a host portion that is all ones.
 * Host -- A computer or other device on a TCP/IP network.
