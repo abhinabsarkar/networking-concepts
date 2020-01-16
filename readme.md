@@ -20,14 +20,14 @@ Create peering between vnet1 & vnet2, vnet1 & vnet3
 * vnet1 v1-v3 (allow forwarding to vnet3)
 
 Create VM as Network Virtual Appliance (NVA)
-* vnet1 vm1 as NVA (20.0.0.4)
+* vm1 (20.0.0.4) in vnet1 as NVA
 * Enable IP forwarding at NIC (in Azure)
 * Enable IP forwarding at OS (in the VM)
  
 Create Route table for vnet2 - route-table-vnet2	
 * route-to-vnet3 (vnet3-address-space(target - 20.2.0.0/16), next-hop-address(nva-vnet1-ip - 20.0.0.4))	
-* Associate to subnet2(20.1.0.0/24)
+* Associate route table to subnet2 (20.1.0.0/24)
 
 Create Route table for vnet3 - route-table-vnet3	
 * route-to-vnet2 (vnet2-address-space(target - 20.1.0.0/16), next-hop-address(nva-vnet1-ip - 20.0.0.4))	
-* Associate to subnet3(20.2.0.0/24)
+* Associate route table to subnet3 (20.2.0.0/24)
