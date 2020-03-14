@@ -35,7 +35,9 @@ The physical layer defines the electrical and physical specifications of the dat
 
 ## Difference between networking devices - Hub, Switch & Router
 
-https://www.youtube.com/watch?v=ZvWn5xBflUs
+Explained simply in this video - https://www.youtube.com/watch?v=ZvWn5xBflUs
+
+![Alt Text](/images/hub-switch-router.jpg)
 
 ## Data processing during transmission
 When a user requests to browse a website on the computer, the remote server software firstly gives the requested data to the application layer, where it is processed from layer to layer down with each layer performing its designated functions. The data is then transmitted over the physical layer of the network until the destination server or another device receives it. At this point the data is passed up through the layers again, each layer performing its assigned operations until the data is used by the receiving software.
