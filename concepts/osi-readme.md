@@ -3,6 +3,17 @@ OSI model is a conceptual model that characterizes and standardizes how differen
 
 ![Alt Text](/images/osi-model.jpg)
 
+![Alt Text](/images/layer-protocols.jpg)
+
+### Glossary
+* Datagram - If the transport protocol is UDP, the unit of data sent from UDP to network layer is called Datagram. [UDP + Data]
+* Segment - If the transport protocol is TCP, the unit of data sent from TCP to network layer is called Segment. [TCP + Data]
+* Packet - Data sent over a network is divided into smaller segments called packets. [IP address + Segment/Datagram]
+* Frame - Consists of a link layer header followed by a packet. [MAC + Packet + FCS] (Media Access Control, Frame Check Sequence)
+* Bits - represented using electrical signals and pulses of light transferred through a computer network. A bit has a single binary value, either 0 or 1.
+
+![alt text](/images/frame-packet-segment.jpg)
+
 **Layer 7: Application Layer** - application user interface like IE / Outlook, protocols like http, ftp work on this layer
 
 The application layer of OSI model interacts directly with software applications to provide communication functions as required, and it is the closest to end users. Functions of application layer typically include verifying the availability of communication partners and resources to support any data transfer. This layer also defines protocols for end applications, such as domain name system (DNS), file transfer protocol (FTP), hypertext transfer protocol (HTTP), Internet massage access protocol (IMAP), post office protocol (POP), simple mail transfer protocol (SMTP), Simple Network Management Protocol (SNMP), and Telnet (a terminal emulation).
@@ -25,13 +36,16 @@ The network layer handles packet routing via logical addressing and switching fu
 
 **Layer 2: Data Link Layer** - data gets converted to frames, Switch works on this layer
 
-The data link layer provides node-to-node transfer—a link between two directly connected nodes. It handles packaging and unpacking the data in frames. It defines the protocol to establish and terminate a connection between two physically connected devices, such as Point-to-Point Protocol (PPP). The data link layer is generally divided into two sublayers—media access control (MAC) layer and logical link control (LLC) layer. MAC layer is responsible for controlling how devices in a network gain access to a media and permission to transmit data. LLC layer is responsible for identifying and encapsulating network layer protocols, and controls error checking and frame synchronization.
+The data link layer provides node-to-node transfer — a link between two directly connected nodes. It handles packaging and unpacking the data in frames. It defines the protocol to establish and terminate a connection between two physically connected devices, such as Point-to-Point Protocol (PPP). The data link layer is generally divided into two sub-layers:
+    1. Media Access Control (MAC) layer - MAC layer is responsible for controlling how devices in a network gain access to a media and permission to transmit data. 2. Logical Link Control (LLC) layer- LLC layer is responsible for identifying and encapsulating network layer protocols, and controls error checking and frame synchronization.
+
+![alt txt](/images/data-link-layer.png)
 
 **Layer 1: Physical Layer** - data travel in the form of Bits (0’s and 1’s) using devices like Hubs, Fibre Optics
 
 The physical layer defines the electrical and physical specifications of the data connection. For example, the layout of pins of the connector, the operation voltages of an electrical cable, optical fiber cable specifications, and the frequency for wireless devices. It is responsible for transmission and reception of unstructured raw data in a physical medium. Bit rate control is done at the physical layer. It is the layer of low-level networking equipment and is never concerned with protocols or other higher-layer items.
 
-![Alt Text](/images/layer-protocols.jpg)
+![Alt Text](/images/signal-to-bits.png)
 
 ## Difference between networking devices - Hub, Switch & Router
 
