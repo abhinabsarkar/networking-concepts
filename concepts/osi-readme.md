@@ -36,8 +36,9 @@ The network layer handles packet routing via logical addressing and switching fu
 
 **Layer 2: Data Link Layer** - data gets converted to frames, Switch works on this layer
 
-The data link layer provides node-to-node transfer — a link between two directly connected nodes. It handles packaging and unpacking the data in frames. It defines the protocol to establish and terminate a connection between two physically connected devices, such as Point-to-Point Protocol (PPP). The data link layer is generally divided into two sub-layers:
-    1. Media Access Control (MAC) layer - MAC layer is responsible for controlling how devices in a network gain access to a media and permission to transmit data. 2. Logical Link Control (LLC) layer- LLC layer is responsible for identifying and encapsulating network layer protocols, and controls error checking and frame synchronization.
+The data link layer provides node-to-node transfer — a link between two directly connected nodes. It handles packaging and unpacking the data in frames. It defines the protocol to establish and terminate a connection between two physically connected devices, such as Point-to-Point Protocol (PPP). The data link layer is generally divided into two sub-layers: 
+1. Media Access Control (MAC) layer - MAC layer is responsible for controlling how devices in a network gain access to a media and permission to transmit data. 
+2. Logical Link Control (LLC) layer- LLC layer is responsible for identifying and encapsulating network layer protocols, and controls error checking and frame synchronization.
 
 ![alt txt](/images/data-link-layer.png)
 
