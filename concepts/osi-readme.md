@@ -10,6 +10,7 @@ OSI model is a conceptual model that characterizes and standardizes how differen
 * Segment - If the transport protocol is TCP, the unit of data sent from TCP to network layer is called Segment. [TCP + Data]
 * Packet - Data sent over a network is divided into smaller segments called packets. [IP address + Segment/Datagram]
 * Frame - Consists of a link layer header followed by a packet. [MAC + Packet + FCS] (Media Access Control, Frame Check Sequence)
+    * Frame check sequence (FCS) refers to the extra bits and characters added to data packets for error detection and control.
 * Bits - represented using electrical signals and pulses of light transferred through a computer network. A bit has a single binary value, either 0 or 1.
 
 ![alt text](/images/frame-packet-segment.jpg)
